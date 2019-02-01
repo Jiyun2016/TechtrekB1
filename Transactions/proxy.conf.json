@@ -1,0 +1,9 @@
+{
+	"/api": {
+		"target": "https://techtrek-api-gateway.cfapps.io/",
+		"secure": false,
+		"pathRewrite": {
+		  "^/api": ""
+		}
+	}
+}
