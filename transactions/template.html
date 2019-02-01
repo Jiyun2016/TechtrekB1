@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
     crossorigin="anonymous">
 
+    <script src="vendor/jquery/jquery.min.js"></script>
 
 </head>
 
@@ -27,43 +28,43 @@
 
   <script>
 
-    // var settings = {
-    //     "async": true,
-    //     "crossDomain": true,
-    //     "url": "https://techtrek-api-gateway.cfapps.io/customers/1/details",
-    //     "method": "GET",
-    //     "headers": {
-    //       "identity": "B1",
-    //       "token": "e88dbe71-2bc2-4fd0-8ebf-0db3337734fc",
-    //       "Cache-Control": "no-cache",
-    //       "Postman-Token": "94868b3f-e287-43e6-9868-b13413c6531d"
-    //     }
-    //   }
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "http://cors-anywhere.herokapp.com/https://techtrek-api-gateway.cfapps.io/customers/1/details",
+        "method": "GET",
+        "headers": {
+          "identity": "B1",
+          "token": "e88dbe71-2bc2-4fd0-8ebf-0db3337734fc",
+          "Cache-Control": "no-cache",
+          "Postman-Token": "94868b3f-e287-43e6-9868-b13413c6531d"
+        }
+      }
 
-    //   $(document).ready(function () {
-    //         $.ajax(settings).done(function (response) {
-    //         console.log(response);
-    //       });
-    //     });
+      $(document).ready(function () {
+            $.ajax(settings).done(function (response) {
+            console.log(response);
+          });
+        });
 
 
-    var request = new XMLHttpRequest();
-    request.withCredentials = true;
-    var data = null;
-    var token = "e88dbe71-2bc2-4fd0-8ebf-0db3337734fc";
-    var identity = "B1";
+    // var request = new XMLHttpRequest();
+    // request.withCredentials = true;
+    // var data = null;
+    // var token = "e88dbe71-2bc2-4fd0-8ebf-0db3337734fc";
+    // var identity = "B1";
 
-    request.open('GET', 'https://techtrek2-api-gateway.cfapps.io/customers/1/details', true);
-    request.setRequestHeader("identity", "B1");
-    request.setRequestHeader("token", "e88dbe71-2bc2-4fd0-8ebf-0db3337734fc");
-    // request.setRequestHeader("Cache-Control", "no-cache");
-    // request.setRequestHeader("Postman-Token", "3abcfc99-fc9f-4ebd-ad43-7ee7881ba34c");
+    // request.open('GET', 'https://techtrek2-api-gateway.cfapps.io/customers/1/details', true);
+    // request.setRequestHeader("identity", "B1");
+    // request.setRequestHeader("token", "e88dbe71-2bc2-4fd0-8ebf-0db3337734fc");
+    // // request.setRequestHeader("Cache-Control", "no-cache");
+    // // request.setRequestHeader("Postman-Token", "3abcfc99-fc9f-4ebd-ad43-7ee7881ba34c");
 
-    request.onload = function () {
-      // Begin accessing JSON data here
-    }
+    // request.onload = function () {
+    //   // Begin accessing JSON data here
+    // }
 
-    request.send(data);
+    // request.send(data);
 
       // console.log(request);
   </script>
@@ -114,8 +115,8 @@
                 <!-- <div class="dropdown-item"> -->
                 <div class="card border-light" style="width: 18rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Welcome Back [firstName]</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Last Logged in: [lastLogIn]</h6>
+                    <h5 class="card-title">Welcome Back John!</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Last Logged in: 3 days ago</h6>
                     <!-- <p class="card-text">How can we help you today?</p> -->
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <!-- <a href="#" class="card-link">Edit Profile</a>
@@ -140,7 +141,7 @@
   <!-- Page Content -->
   <div class="container" style="padding-top:15px;">
     <div class="jumbotron">
-      <h1 class="display-4">Welcome Back, [FirstName]</h1>
+      <h1 class="display-4">Welcome Back, John</h1>
       <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
         featured content or information.</p> -->
       <hr class="my-4">
@@ -191,18 +192,21 @@
             </div>
           </div>
           <!-- Balances -->
-          <div class="col-sm-6t" style="width:400px;">
-            <div class="card">
-              <div class="card-header">
-                Account Summary
-              </div>
-              <!-- Feqruent Transactions -->
-              <div class="card-body">
-              </div>
-            </div>
-          </div>
+          
           <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+        <div class="col-sm-6t float-right" style="width:400px;">
+          <div class="card">
+            <div class="card-header">
+              Account Summary
+            </div>
+            <!-- Feqruent Transactions -->
+            <div class="card-body">
+              <b>Account Balance:</b> $4,359.55<br>
+              <b>Last Withdrawal:</b> 45mins ago
+            </div>
+          </div>
         </div>
       </div>
       <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
@@ -213,7 +217,7 @@
 
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
+  
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
