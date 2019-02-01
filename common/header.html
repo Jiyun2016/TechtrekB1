@@ -26,6 +26,27 @@
   <body>
 
     <script>
+
+      // var settings = {
+      //     "async": true,
+      //     "crossDomain": true,
+      //     "url": "https://techtrek-api-gateway.cfapps.io/customers/1/details",
+      //     "method": "GET",
+      //     "headers": {
+      //       "identity": "B1",
+      //       "token": "e88dbe71-2bc2-4fd0-8ebf-0db3337734fc",
+      //       "Cache-Control": "no-cache",
+      //       "Postman-Token": "94868b3f-e287-43e6-9868-b13413c6531d"
+      //     }
+      //   }
+
+      //   $(document).ready(function () {
+      //         $.ajax(settings).done(function (response) {
+      //         console.log(response);
+      //       });
+      //     });
+
+        
       var request = new XMLHttpRequest();
       request.withCredentials = true;
       var data = null;
@@ -83,7 +104,7 @@
               <a class="nav-link" href="#">Request</a>
             </li>
             <li>
-              <div class="btn-group">
+              <div class="btn-group" style="padding-left:15px;">
                 <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false">
                   <i class="fas fa-user"></i>
