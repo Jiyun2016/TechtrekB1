@@ -6,31 +6,31 @@
 	<h3>View Customer Details</h3>
 	<br/>
 	
-	<table id="tableCustomerDetails" style="width:30%; cellpadding: 1px; cellspacing: 1px;">
+	<table id="tableCustomerDetails" style="width:50%; cellpadding: 1px; cellspacing: 1px;">
 		<thead>
 			<tr>
 				<th>ID</th>
-				<td>{{customerId}}</td>
+				<td>1</td>
 			</tr>
 			<tr>
 				<th>Gender</th>
-				<td>{{gender}}</td>
+				<td>Male</td>
 			</tr>
 			<tr>
 				<th>Frist Name</th>
-				<td>{{firstName}}</td>
+				<td>Ze Yang</td>
 			</tr>
 			<tr>
 				<th>Last Name</th>
-				<td>{{lastName}}</td>
+				<td>Lim</td>
 			</tr>
 			<tr>
 				<th>Last Log In</th>
-				<td>{{lastLogIn}}</td>
+				<td>2019-01-27T14:00:00.000+0000</td>
 			</tr>
 			<tr>
 				<th>Date Of Birth</th>
-				<td>{{dateOfBirth}}</td>
+				<td>2000-02-01T00:00:00.000+0000</td>
 			</tr>
 		</thead>
 	
@@ -38,9 +38,49 @@
 </div>
 <br/>
 <br/>
+<br/>
+
+<div class="content" align="left">
+
+	<h3>Transfer Fund</h3>
+	<br/>
+
+	<select [(ngModel)] = "payees" (click)="view($event.target.value)">
+		<option value="1">--Select--</option>
+		<option *ngFor = "let p of payees" value = {{p}} >
+			{{p}}	
+		</option>
+	</select>
+</div>
+
+<br/>
+
+<div class="content" align="left">	
+	<table id="tablePayeeDetails" style="width:50%; cellpadding: 1px; cellspacing: 1px;">
+		<thead>
+			<tr>
+				<th>Frist Name</th>
+				<td>Amy</td>
+			</tr>
+			<tr>
+				<th>Last Name</th>
+				<td>Tan</td>
+			</tr>
+			<tr>
+				<th>Account No</th>
+				<td>8888888</td>
+			</tr>
+		</thead>
+	
+	</table>
+</div>
+
+<br/>
+<br/>
+<br/>
 	<div class="content" align="left">
 	<h3>View Historical Transaction Statistics</h3>
-	<img src="/src/pbx.jpg" alt="Bar Chart">
+	<img src="assets/image/TransHistory.png" alt="Bar Chart">
 	<br/>	
 	</div>
 
@@ -52,40 +92,41 @@
 
 	<br/>
 
-	<table id="tableTransactionDetails" style="width:30%; cellpadding: 1px; cellspacing: 1px;">
+	<table id="tableTransactionDetails" style="width:50%; cellpadding: 1px; cellspacing: 1px;">
 		<thead>
 			<tr>
 				<th>Transaction ID</th>
-				<td>{{transactionId}}</td>
+				<td>d1911856-60cc-48fb-aac7-f4cb2be6efba</td>
 			</tr>
 			<tr>
 				<th>Account Id</th>
-				<td>{{transactionId}}</td>
+				<td>10</td>
 			</tr>
 			<tr>
 				<th>Type</th>
-				<td>{{transactionId}}</td>
+				<td>DEBIT</td>
 			</tr>
 			<tr>
 				<th>Amount</th>
-				<td>{{transactionId}}</td>
+				<td>16.41</td>
 			</tr>
 			<tr>
 				<th>Date</th>
-				<td>{{transactionId}}</td>
+				<td>2018-01-01T19:00:00.000+0000</td>
 			</tr>
 			<tr>
 				<th>Tag</th>
-				<td>{{transactionId}}</td>
+				<td>F&B</td>
 			</tr>
 			<tr>
 				<th>Reference Number</th>
-				<td>{{transactionId}}</td>
+				<td>297899874 BONES</td>
 			</tr>
 		</thead>
 	</table>
 </div>
-
+<br/>
+<br/>
 
 
 <app-footer></app-footer>

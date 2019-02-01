@@ -7,7 +7,7 @@ import { TransactionHomeComponent } from './transaction-home/transaction-home.co
 
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/home', pathMatch: 'full' },
+	{ path: '', redirectTo: '/transactionhome', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
   { path: 'transactionhome', component: TransactionHomeComponent }
 ];

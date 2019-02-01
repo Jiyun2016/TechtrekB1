@@ -13,6 +13,8 @@ import { Customer } from '../customer'
 export class TransactionHomeComponent implements OnInit {
 	msgs: any[] = [];
 
+	payees: string[] = ["Amy Tan","payee1","payee2","payee3"];
+
 	customer: Customer;
 	customerId: number;
     gender: string;
