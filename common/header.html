@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TechTrek - B1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/2-col-portfolio.css" rel="stylesheet">
+
+    <!-- FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous">
+
+
+  </head>
+
+  <body>
+
+    <script>
+      var request = new XMLHttpRequest();
+      request.withCredentials = true;
+      var data = null;
+      var token = "e88dbe71-2bc2-4fd0-8ebf-0db3337734fc";
+      var identity = "B1";
+      
+      request.open('GET', 'https://techtrek-api-gateway.cfapps.io/customers/1/details', true);
+      request.setRequestHeader("identity", "B1");
+      request.setRequestHeader("token", "e88dbe71-2bc2-4fd0-8ebf-0db3337734fc");
+      // request.setRequestHeader("Cache-Control", "no-cache");
+      // request.setRequestHeader("Postman-Token", "3abcfc99-fc9f-4ebd-ad43-7ee7881ba34c");
+
+      request.onload = function () {
+          // Begin accessing JSON data here
+        }
+
+      request.send(data);
+
+      // console.log(request);
+    </script>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">DBS TechTrek B1</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">My Accounts
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Transfer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pay</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Plan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Invest</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Apply</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Request</a>
+            </li>
+            <li>
+              <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <i class="fas fa-user"></i>
+                </button>
+                <div class="dropdown-menu">
+                  <!-- <div class="dropdown-item"> -->
+                    <div class="card border-light" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Welcome Back [firstName]</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Last Logged in: [lastLogIn]</h6>
+                        <!-- <p class="card-text">How can we help you today?</p> -->
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <!-- <a href="#" class="card-link">Edit Profile</a>
+                        <a href="#" class="card-link">Another link</a> -->
+                      </div>
+                    </div>
+                  <!-- </div> -->
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"><i class="fas fa-envelope"></i> Inbox</a>
+                  <a class="dropdown-item" href="#"><i class="fas fa-user-alt"></i> Profile</a>
+                  <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"><i class="fas fa-lock"></i> Logout</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <!-- Page Heading -->
+      
+    </div>
+
+  
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
