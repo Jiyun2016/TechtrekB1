@@ -25,6 +25,28 @@
 
   <body>
 
+    <script>
+      var request = new XMLHttpRequest();
+      request.withCredentials = true;
+      var data = null;
+      var token = "e88dbe71-2bc2-4fd0-8ebf-0db3337734fc";
+      var identity = "B1";
+      
+      request.open('GET', 'https://techtrek-api-gateway.cfapps.io/customers/1/details', true);
+      request.setRequestHeader("identity", "B1");
+      request.setRequestHeader("token", "e88dbe71-2bc2-4fd0-8ebf-0db3337734fc");
+      // request.setRequestHeader("Cache-Control", "no-cache");
+      // request.setRequestHeader("Postman-Token", "3abcfc99-fc9f-4ebd-ad43-7ee7881ba34c");
+
+      request.onload = function () {
+          // Begin accessing JSON data here
+        }
+
+      request.send(data);
+
+      // console.log(request);
+    </script>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
